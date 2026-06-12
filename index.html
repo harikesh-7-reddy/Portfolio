@@ -1,0 +1,594 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch Harikesh Reddy | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+}
+
+/* Navbar */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 50px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    color:greenyellow;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:greenyellow;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:50px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h3{
+    color:#ccc;
+    margin-bottom:10px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:greenyellow;
+    margin-bottom:10px;
+}
+
+.hero-text h2{
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+.buttons{
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:greenyellow;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    margin-right:15px;
+    transition:.3s;
+}
+
+.btn-outline{
+    display:inline-block;
+    padding:12px 25px;
+    border:2px solid greenyellow;
+    color:greenyellow;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover,
+.btn-outline:hover{
+    transform:translateY(-5px);
+}
+
+.hero-img img{
+    width:330px;
+    height:330px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid greenyellow;
+    box-shadow:0 0 30px greenyellow;
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    color:greenyellow;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* About */
+.about p{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Stats */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.stat-box{
+    text-align:center;
+    background:#111;
+    padding:30px;
+    border-radius:12px;
+    min-width:220px;
+    border:1px solid #333;
+}
+
+.stat-box h1{
+    color:greenyellow;
+    font-size:45px;
+}
+
+/* Skills */
+.skills-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill-card{
+    background:#111;
+    border:2px solid greenyellow;
+    padding:18px 30px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    background:greenyellow;
+    color:black;
+    transform:translateY(-8px);
+}
+
+/* Projects */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #333;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    border-color:greenyellow;
+}
+
+.project-card h2{
+    color:greenyellow;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#ddd;
+    line-height:1.7;
+}
+
+.project-card a{
+    display:inline-block;
+    margin-top:15px;
+    color:greenyellow;
+    text-decoration:none;
+}
+
+/* Education */
+.edu-card{
+    max-width:700px;
+    margin:auto;
+    background:#111;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #333;
+    text-align:center;
+}
+
+/* Achievements */
+.achievement-list{
+    max-width:700px;
+    margin:auto;
+}
+
+.achievement-list li{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* Social */
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.socials img{
+    width:70px;
+    transition:.3s;
+}
+
+.socials img:hover{
+    transform:scale(1.15);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    margin-top:50px;
+}
+
+footer h3{
+    color:greenyellow;
+    margin-bottom:10px;
+}
+
+/* Scroll Animation */
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-img img{
+    width:250px;
+    height:250px;
+    margin-bottom:30px;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-links{
+    text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Portfolio</div>
+
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link">Certificates</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
+
+        <h1>Ch Harikesh Reddy</h1>
+
+        <h2>I am a <span id="typing"></span></h2>
+
+        <p>
+            Electronics and Communication Engineering student with strong
+            knowledge in Python, SQL, Data Structures, Embedded Systems and
+            Web Development. Passionate about software development,
+            problem-solving and building impactful applications.
+        </p>
+
+        <div class="buttons">
+            <a href="https://docs.google.com/document/d/1mj1omTavipMTGXOTjq9TEn_iK16cFCLycRHobXAE3IQ/edit?usp=sharing" class="btn">Download Resume</a>
+            <a href="#projects" class="btn-outline">View Projects</a>
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://res.cloudinary.com/dhqvknalh/image/upload/e_improve:indoor/1760764690694_rrokki" alt="Harikesh Reddy">
+    </div>
+
+</section>
+
+<!-- About -->
+<section class="about hidden" id="about">
+    <h1 class="section-title">About Me</h1>
+
+    <p>
+        I am an Electronics and Communication Engineering student passionate
+        about Software Development, Embedded Systems, Python Programming,
+        Web Technologies, and Problem Solving. I enjoy developing projects
+        that solve real-world problems and continuously improving my
+        technical skills through coding practice and hands-on learning.
+    </p>
+</section>
+
+<!-- Stats -->
+<section class="hidden">
+    <div class="stats">
+
+        <div class="stat-box">
+            <h1>100+</h1>
+            <p>Problems Solved</p>
+        </div>
+
+        <div class="stat-box">
+            <h1>3+</h1>
+            <p>Projects</p>
+        </div>
+
+        <div class="stat-box">
+            <h1>5+</h1>
+            <p>Technologies</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="hidden">
+    <h1 class="section-title">Skills</h1>
+
+    <div class="skills-container">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">Web Development</div>
+        <div class="skill-card">Embedded Systems</div>
+        <div class="skill-card">VLSI</div>
+        <div class="skill-card">Data Structures</div>
+        <div class="skill-card">Problem Solving</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="hidden">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <h2>Budget Management Application</h2>
+
+            <p>
+                Developed using Python and SQL to efficiently manage
+                income, expenses and financial tracking.
+            </p>
+
+            <a href="https://github.com/harikesh-7-reddy/Budget-App" target="_blank">
+                View Project →
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h2>Rock Paper Scissors Game</h2>
+
+            <p>
+                Interactive game built using HTML, CSS and JavaScript
+                with score tracking and responsive UI.
+            </p>
+
+            <a href="https://github.com/harikesh-7-reddy/Rock-Paper-Scissors" target="_blank">
+                View Project →
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h2>More Projects in GitHub</h2>
+
+            <a href="https://github.com/harikesh-7-reddy?tab=repositories" target="_blank">View More Projects →</a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="hidden">
+
+    <h1 class="section-title">Education</h1>
+
+    <div class="edu-card">
+        <h2>B.Tech - Electronics & Communication Engineering</h2>
+        <p>sreyas institute of engineering and technology</p>
+        <p>2023 - 2027</p>
+    </div>
+
+</section>
+
+<!-- Achievements -->
+<section class="hidden">
+
+    <h1 class="section-title">Achievements</h1>
+
+    <ul class="achievement-list">
+        <li>⭐ Active HackerRank Practitioner</li>
+        <li>⭐ Active LeetCode Problem Solver</li>
+        <li>⭐ Developed Multiple Software Projects</li>
+        <li>⭐ Strong Foundation in Python and SQL</li>
+    </ul>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact hidden">
+
+    <h1 class="section-title">Contact</h1>
+
+    <p><strong>Name:</strong> Ch Harikesh Reddy</p>
+    <p><strong>Email:</strong> chharikeshreddy@gmail.com</p>
+    <p><strong>Phone:</strong> +91 7842842616</p>
+
+    <div class="socials">
+
+        <a href="https://www.hackerrank.com/profile/chharikeshreddy" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png">
+        </a>
+
+        <a href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291" target="_blank">
+            <img src="https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png">
+        </a>
+
+        <a href="https://github.com/harikesh-7-reddy" target="_blank">
+            <img src="https://res.cloudinary.com/dhqvknalh/image/upload/v1778138399/github-6980894_640_f15zch.png">
+        </a>
+
+        <a href="https://leetcode.com/u/harikesh-reddy/" target="_blank">
+            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png">
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <h3>Ch Harikesh Reddy</h3>
+    <p>Python Developer | Web Developer | ECE Student</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+
+/* Typing Effect */
+const roles = [
+"Python Developer",
+"Web Developer",
+"Problem Solver",
+"Embedded Systems Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+
+function typeEffect(){
+
+    const currentRole = roles[roleIndex];
+
+    document.getElementById("typing").textContent =
+        currentRole.substring(0,charIndex);
+
+    charIndex++;
+
+    if(charIndex > currentRole.length){
+        roleIndex = (roleIndex + 1) % roles.length;
+        charIndex = 0;
+    }
+
+    setTimeout(typeEffect,150);
+}
+
+typeEffect();
+
+/* Scroll Animation */
+const observer = new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
+```
