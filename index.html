@@ -1,606 +1,1560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ch Harikesh Reddy | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <meta name="description"
+        content="Ch Harikesh Reddy - Software Engineering student and full-stack developer building real-world web, AI, Python, and IoT applications.">
 
-body{
-    background:#0a0a0a;
-    color:white;
-}
+    <meta name="keywords"
+        content="Harikesh Reddy, Software Developer, Full Stack Developer, React Developer, JavaScript, Python, Firebase, MySQL">
 
-/* Navbar */
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 50px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.1);
-}
+    <meta name="author" content="Ch Harikesh Reddy">
 
-.logo{
-    color:greenyellow;
-    font-size:28px;
-    font-weight:bold;
-}
+    <title>Ch Harikesh Reddy | Software Developer</title>
 
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    transition:.3s;
-    font-weight:bold;
-}
+    <style>
+        :root {
+            --accent: #b6ff00;
+            --accent-dark: #92d900;
+            --bg: #070707;
+            --surface: #101010;
+            --surface-2: #151515;
+            --border: rgba(255,255,255,0.10);
+            --text: #ffffff;
+            --muted: #b7b7b7;
+            --max-width: 1200px;
+        }
 
-.nav-links a:hover{
-    color:greenyellow;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-/* Hero */
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    padding:50px;
-}
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-.hero-text{
-    max-width:600px;
-}
+        a {
+            color: inherit;
+        }
 
-.hero-text h3{
-    color:#ccc;
-    margin-bottom:10px;
-}
+        /* =========================
+           NAVBAR
+        ========================= */
 
-.hero-text h1{
-    font-size:60px;
-    color:greenyellow;
-    margin-bottom:10px;
-}
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-.hero-text h2{
-    margin-bottom:20px;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-.hero-text p{
-    line-height:1.8;
-    color:#ddd;
-}
+            padding: 18px 6%;
 
-.buttons{
-    margin-top:25px;
-}
+            background: rgba(7, 7, 7, 0.86);
+            backdrop-filter: blur(14px);
 
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:greenyellow;
-    color:black;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    margin-right:15px;
-    transition:.3s;
-}
+            border-bottom: 1px solid var(--border);
+        }
 
-.btn-outline{
-    display:inline-block;
-    padding:12px 25px;
-    border:2px solid greenyellow;
-    color:greenyellow;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:.3s;
-}
+        .logo {
+            color: var(--accent);
+            font-size: 26px;
+            font-weight: 800;
+            text-decoration: none;
+        }
 
-.btn:hover,
-.btn-outline:hover{
-    transform:translateY(-5px);
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
 
-.hero-img img{
-    width:330px;
-    height:330px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid greenyellow;
-    box-shadow:0 0 30px greenyellow;
-}
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-/* Sections */
-section{
-    padding:80px 10%;
-}
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
-.section-title{
-    text-align:center;
-    color:greenyellow;
-    font-size:40px;
-    margin-bottom:40px;
-}
+        /* =========================
+           HERO
+        ========================= */
 
-/* About */
-.about p{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-    color:#ddd;
-}
+        .hero {
+            min-height: calc(100vh - 75px);
+            max-width: var(--max-width);
+            margin: auto;
 
-/* Stats */
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    flex-wrap:wrap;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
 
-.stat-box{
-    text-align:center;
-    background:#111;
-    padding:30px;
-    border-radius:12px;
-    min-width:220px;
-    border:1px solid #333;
-}
+            padding: 80px 30px;
+        }
 
-.stat-box h1{
-    color:greenyellow;
-    font-size:45px;
-}
+        .hero-text {
+            max-width: 680px;
+        }
 
-/* Skills */
-.skills-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
+        .hero-text .intro {
+            color: var(--muted);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-.skill-card{
-    background:#111;
-    border:2px solid greenyellow;
-    padding:18px 30px;
-    border-radius:10px;
-    transition:.3s;
-}
+        .hero-text h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
 
-.skill-card:hover{
-    background:greenyellow;
-    color:black;
-    transform:translateY(-8px);
-}
+        .hero-text h2 {
+            font-size: clamp(22px, 3vw, 34px);
+            margin-bottom: 20px;
+        }
 
-/* Projects */
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
+        #typing {
+            color: var(--accent);
+        }
 
-.project-card{
-    background:#111;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid #333;
-    transition:.3s;
-}
+        .hero-text p {
+            color: #d5d5d5;
+            font-size: 17px;
+            max-width: 650px;
+            line-height: 1.8;
+        }
 
-.project-card:hover{
-    transform:translateY(-10px);
-    border-color:greenyellow;
-}
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
 
-.project-card h2{
-    color:greenyellow;
-    margin-bottom:15px;
-}
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 8px;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
 
-.project-card p{
-    color:#ddd;
-    line-height:1.7;
-}
+        .btn:hover {
+            transform: translateY(-4px);
+            background: var(--accent-dark);
+        }
 
-.project-card a{
-    display:inline-block;
-    margin-top:15px;
-    color:greenyellow;
-    text-decoration:none;
-}
+        .btn-outline {
+            display: inline-block;
+            padding: 11px 24px;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
 
-/* Education */
-.edu-card{
-    max-width:700px;
-    margin:auto;
-    background:#111;
-    padding:25px;
-    border-radius:12px;
-    border:1px solid #333;
-    text-align:center;
-}
+        .btn-outline:hover {
+            transform: translateY(-4px);
+            background: var(--accent);
+            color: #000;
+        }
 
-/* Achievements */
-.achievement-list{
-    max-width:700px;
-    margin:auto;
-}
+        .hero-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
 
-.achievement-list li{
-    margin:15px 0;
-    font-size:18px;
-}
+        .hero-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-/* Contact */
-.contact{
-    text-align:center;
-}
+        .hero-links a:hover {
+            color: var(--accent);
+        }
 
-.contact p{
-    margin:10px 0;
-    font-size:18px;
-}
+        .hero-img {
+            flex-shrink: 0;
+        }
 
-/* Social */
-.socials{
-    display:flex;
-    justify-content:center;
-    gap:35px;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
+        .hero-img img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 50%;
 
-.socials img{
-    width:70px;
-    transition:.3s;
-}
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 45px rgba(182,255,0,0.35);
+        }
 
-.socials img:hover{
-    transform:scale(1.15);
-}
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
-/* Footer */
-footer{
-    text-align:center;
-    padding:30px;
-    background:#111;
-    margin-top:50px;
-}
+        section {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 90px 30px;
+        }
 
-footer h3{
-    color:greenyellow;
-    margin-bottom:10px;
-}
+        .section-title {
+            text-align: center;
+            color: var(--accent);
+            font-size: clamp(32px, 4vw, 44px);
+            margin-bottom: 45px;
+        }
 
-/* Scroll Animation */
-.hidden{
-    opacity:0;
-    transform:translateY(50px);
-    transition:all .8s;
-}
+        .section-subtitle {
+            text-align: center;
+            max-width: 760px;
+            margin: -20px auto 45px;
+            color: var(--muted);
+        }
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
+        /* =========================
+           ABOUT
+        ========================= */
 
-/* Responsive */
-@media(max-width:768px){
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
 
-.hero{
-    flex-direction:column-reverse;
-    text-align:center;
-}
+        .about-content p {
+            color: #d2d2d2;
+            font-size: 17px;
+            line-height: 1.9;
+        }
 
-.hero-text h1{
-    font-size:42px;
-}
+        /* =========================
+           STATS
+        ========================= */
 
-.hero-img img{
-    width:250px;
-    height:250px;
-    margin-bottom:30px;
-}
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-.navbar{
-    flex-direction:column;
-    gap:10px;
-}
+        .stat-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
 
-.nav-links{
-    text-align:center;
-}
-}
-</style>
+        .stat-box:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .stat-box h3 {
+            color: var(--accent);
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            color: #ccc;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill-card {
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: #eee;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translateY(-4px);
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            position: relative;
+            background: linear-gradient(
+                145deg,
+                var(--surface-2),
+                var(--surface)
+            );
+
+            padding: 28px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+        }
+
+        .project-number {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .project-stack {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .project-card p {
+            color: #c6c6c6;
+            line-height: 1.75;
+        }
+
+        .project-features {
+            margin: 18px 0;
+            padding-left: 18px;
+            color: #ddd;
+        }
+
+        .project-features li {
+            margin-bottom: 7px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            transform: translateX(5px);
+        }
+
+        .featured {
+            grid-column: span 2;
+            border-color: rgba(182,255,0,0.35);
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-card {
+            max-width: 850px;
+            margin: auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .education-card h3 {
+            color: var(--accent);
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .education-card p {
+            color: #ccc;
+            margin: 5px 0;
+        }
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-list {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .achievement-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 22px;
+            color: #ddd;
+        }
+
+        .achievement-item span {
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        .certifications {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .certifications p {
+            color: #ccc;
+            line-height: 2;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 40px;
+        }
+
+        .contact-box p {
+            color: #ccc;
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .contact-buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .socials a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: var(--accent);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 50px;
+            border-top: 1px solid var(--border);
+            background: #0c0c0c;
+        }
+
+        footer h3 {
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.8s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-text {
+                margin: auto;
+            }
+
+            .hero-buttons,
+            .hero-links {
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured {
+                grid-column: span 1;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 14px;
+                padding: 16px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 70px 20px 50px;
+            }
+
+            .hero-img img {
+                width: 240px;
+                height: 240px;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
+            .project-card {
+                padding: 23px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .hero-text h2 {
+                font-size: 22px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">Portfolio</div>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-        <a href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link">Certificates</a>
-    </div>
-</nav>
+    <nav class="navbar">
 
-<!-- Hero -->
-<section class="hero">
+        <a href="#home" class="logo">Harikesh Reddy</a>
 
-    <div class="hero-text">
-        <h3>Hello, I'm</h3>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
 
-        <h1>Ch Harikesh Reddy</h1>
+            <a
+                href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link"
+                target="_blank">
+                Certificates
+            </a>
+        </div>
 
-        <h2>I am a <span id="typing"></span></h2>
+    </nav>
 
-        <p>
-            Electronics and Communication Engineering student with strong
-            knowledge in Python, SQL, Data Structures, Embedded Systems and
-            Web Development. Passionate about software development,
-            problem-solving and building impactful applications.
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="intro">Hello, I'm</p>
+
+            <h1>Ch Harikesh Reddy</h1>
+
+            <h2>
+                <span id="typing"></span>
+            </h2>
+
+            <p>
+                Electronics and Communication Engineering student focused on
+                building real-world software applications using React,
+                JavaScript, TypeScript, Python, SQL, Firebase and APIs.
+                I enjoy solving problems, designing practical systems and
+                continuously improving my software engineering skills.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://docs.google.com/document/d/1mj1omTavipMTGXOTjq9TEn_iK16cFCLycRHobXAE3IQ/edit?usp=sharing"
+                    class="btn"
+                    target="_blank">
+                    Download Resume
+                </a>
+
+                <a href="#projects" class="btn-outline">
+                    View Projects
+                </a>
+
+            </div>
+
+            <div class="hero-links">
+
+                <a
+                    href="https://github.com/harikesh-7-reddy"
+                    target="_blank">
+                    GitHub →
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291"
+                    target="_blank">
+                    LinkedIn →
+                </a>
+
+                <a
+                    href="https://leetcode.com/u/harikesh-reddy/"
+                    target="_blank">
+                    LeetCode →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-img">
+
+            <img
+                src="https://res.cloudinary.com/dhqvknalh/image/upload/e_improve:indoor/1760764690694_rrokki"
+                alt="Ch Harikesh Reddy">
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about" class="hidden">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I am an Electronics and Communication Engineering student
+                passionate about software development and building practical
+                technology solutions. My projects span real-time web
+                applications, full-stack development, AI-powered systems,
+                database applications and embedded/IoT projects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================== -->
+
+    <section class="hidden">
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <h3>100+</h3>
+
+                <p>LeetCode Problems</p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h3>8+</h3>
+
+                <p>Projects</p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h3>10+</h3>
+
+                <p>Technologies</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills" class="hidden">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-subtitle">
+            Technologies and concepts I use to build web applications,
+            backend systems, database-driven applications and embedded projects.
         </p>
 
-        <div class="buttons">
-            <a href="https://docs.google.com/document/d/1mj1omTavipMTGXOTjq9TEn_iK16cFCLycRHobXAE3IQ/edit?usp=sharing" class="btn">Download Resume</a>
-            <a href="#projects" class="btn-outline">View Projects</a>
-        </div>
-    </div>
 
-    <div class="hero-img">
-        <img src="https://res.cloudinary.com/dhqvknalh/image/upload/e_improve:indoor/1760764690694_rrokki" alt="Harikesh Reddy">
-    </div>
+        <div class="skills-container">
 
-</section>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">TypeScript</div>
+            <div class="skill-card">SQL</div>
 
-<!-- About -->
-<section class="about hidden" id="about">
-    <h1 class="section-title">About Me</h1>
+            <div class="skill-card">React.js</div>
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">Node.js</div>
 
-    <p>
-        I am an Electronics and Communication Engineering student passionate
-        about Software Development, Embedded Systems, Python Programming,
-        Web Technologies, and Problem Solving. I enjoy developing projects
-        that solve real-world problems and continuously improving my
-        technical skills through coding practice and hands-on learning.
-    </p>
-</section>
+            <div class="skill-card">REST APIs</div>
+            <div class="skill-card">Firebase</div>
+            <div class="skill-card">MySQL</div>
+            <div class="skill-card">Google Maps API</div>
 
-<!-- Stats -->
-<section class="hidden">
-    <div class="stats">
+            <div class="skill-card">Git</div>
+            <div class="skill-card">GitHub</div>
+            <div class="skill-card">GitHub Actions</div>
 
-        <div class="stat-box">
-            <h1>100+</h1>
-            <p>Problems Solved</p>
+            <div class="skill-card">DSA</div>
+            <div class="skill-card">OOP</div>
+            <div class="skill-card">Authentication</div>
+            <div class="skill-card">Database Design</div>
+
+            <div class="skill-card">Embedded Systems</div>
+            <div class="skill-card">IoT</div>
+
         </div>
 
-        <div class="stat-box">
-            <h1>3+</h1>
-            <p>Projects</p>
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects" class="hidden">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <p class="section-subtitle">
+            A selection of projects focused on real-world problems,
+            full-stack development, APIs, databases, AI and IoT.
+        </p>
+
+
+        <div class="projects-grid">
+
+
+            <!-- 01 BUS TRACKER -->
+
+            <div class="project-card featured">
+
+                <div class="project-number">
+                    01 — FEATURED PROJECT
+                </div>
+
+                <h3>College Bus Tracker</h3>
+
+                <div class="project-stack">
+                    React.js · Firebase · Google Maps API
+                </div>
+
+                <p>
+                    A real-time GPS-based college bus tracking application
+                    designed to monitor buses, routes and trips.
+                </p>
+
+                <ul class="project-features">
+
+                    <li>
+                        Real-time bus location updates
+                    </li>
+
+                    <li>
+                        Google Maps integration and route tracking
+                    </li>
+
+                    <li>
+                        Stop detection, trip history and distance analytics
+                    </li>
+
+                    <li>
+                        Role-based driver and viewer access
+                    </li>
+
+                </ul>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/bus-tracker"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 02 PAGE PULSE -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h3>Page Pulse</h3>
+
+                <div class="project-stack">
+                    JavaScript · React · Node.js · Express
+                </div>
+
+                <p>
+                    A web analysis application designed to inspect website
+                    health and page-level information through a dedicated
+                    frontend and backend architecture.
+                </p>
+
+                <ul class="project-features">
+
+                    <li>
+                        Website and page analysis
+                    </li>
+
+                    <li>
+                        HTTP and response analysis
+                    </li>
+
+                    <li>
+                        HTML parsing and metadata checks
+                    </li>
+
+                </ul>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/page-pulse"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 03 JOBSERCHER -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <h3>Jobsercher</h3>
+
+                <div class="project-stack">
+                    JavaScript · Web Development
+                </div>
+
+                <p>
+                    A web project focused on job-search functionality and
+                    presenting relevant opportunities through a user-facing
+                    application.
+                </p>
+
+                <ul class="project-features">
+
+                    <li>
+                        Job-oriented application interface
+                    </li>
+
+                    <li>
+                        Search-focused user experience
+                    </li>
+
+                    <li>
+                        JavaScript-based web application
+                    </li>
+
+                </ul>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/jobsercher"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 04 PHARMA -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    04
+                </div>
+
+                <h3>PharmaComplaint AI</h3>
+
+                <div class="project-stack">
+                    JavaScript · AI · Full Stack
+                </div>
+
+                <p>
+                    An AI-focused application for handling and working with
+                    pharmaceutical complaint data using a dedicated frontend
+                    and backend architecture.
+                </p>
+
+                <ul class="project-features">
+
+                    <li>
+                        Frontend and backend separation
+                    </li>
+
+                    <li>
+                        AI-powered application workflow
+                    </li>
+
+                    <li>
+                        Database and API-oriented architecture
+                    </li>
+
+                </ul>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/pharmacomplaint-ai"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 05 INVENTORY -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    05
+                </div>
+
+                <h3>Inventory Management Dashboard</h3>
+
+                <div class="project-stack">
+                    TypeScript
+                </div>
+
+                <p>
+                    A dashboard-oriented application focused on presenting
+                    and managing inventory information through a modern
+                    TypeScript-based interface.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/Inventory-Management-Dashboard"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 06 BUDGET -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    06
+                </div>
+
+                <h3>Budget Management Application</h3>
+
+                <div class="project-stack">
+                    Python · MySQL
+                </div>
+
+                <p>
+                    An expense management application for tracking income
+                    and expenses using Python and SQL with a structured
+                    database design.
+                </p>
+
+                <ul class="project-features">
+
+                    <li>
+                        Income and expense tracking
+                    </li>
+
+                    <li>
+                        SQL-based data management
+                    </li>
+
+                    <li>
+                        Structured database architecture
+                    </li>
+
+                </ul>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/Budget-App"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 07 SRIVASTRA -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    07
+                </div>
+
+                <h3>Srivastra</h3>
+
+                <div class="project-stack">
+                    HTML · Web Development
+                </div>
+
+                <p>
+                    A web project focused on presenting a responsive and
+                    visually oriented user experience.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/Srivastra"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- 08 ESP32 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    08
+                </div>
+
+                <h3>ESP32 Fish Feeder</h3>
+
+                <div class="project-stack">
+                    C++ · ESP32 · IoT
+                </div>
+
+                <p>
+                    An embedded/IoT project using an ESP32 to automate fish
+                    feeding through hardware control and connected software.
+                </p>
+
+                <ul class="project-features">
+
+                    <li>
+                        ESP32-based embedded system
+                    </li>
+
+                    <li>
+                        Automated feeding control
+                    </li>
+
+                    <li>
+                        IoT-oriented implementation
+                    </li>
+
+                </ul>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy/ESP32-Fish-Feeder"
+                    target="_blank">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- MORE PROJECTS -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    MORE
+                </div>
+
+                <h3>More Projects</h3>
+
+                <div class="project-stack">
+                    GitHub Repository
+                </div>
+
+                <p>
+                    Explore my complete collection of software, Python,
+                    frontend, embedded and experimental projects.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/harikesh-7-reddy?tab=repositories"
+                    target="_blank">
+                    View All Repositories →
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="stat-box">
-            <h1>5+</h1>
-            <p>Technologies</p>
-        </div>
+    </section>
 
-    </div>
-</section>
 
-<!-- Skills -->
-<section id="skills" class="hidden">
-    <h1 class="section-title">Skills</h1>
+    <!-- =========================
+         EDUCATION
+    ========================== -->
 
-    <div class="skills-container">
-        <div class="skill-card">Python</div>
-        <div class="skill-card">MySQL</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">Web Development</div>
-        <div class="skill-card">Embedded Systems</div>
-        <div class="skill-card">VLSI</div>
-        <div class="skill-card">Data Structures</div>
-        <div class="skill-card">Problem Solving</div>
-        <div class="skill-card">React.js</div>
-        <div class="skill-card">Node.js</div>
-    </div>
-</section>
+    <section id="education" class="hidden">
 
-<!-- Projects -->
-<section id="projects" class="hidden">
-    <h1 class="section-title">Projects</h1>
+        <h2 class="section-title">Education</h2>
 
-    <div class="projects-grid">
+        <div class="education-card">
 
-        <div class="project-card">
-            <h2>Budget Management Application</h2>
+            <h3>
+                B.Tech — Electronics & Communication Engineering
+            </h3>
 
             <p>
-                Developed using Python and SQL to efficiently manage
-                income, expenses and financial tracking.
+                Sreyas Institute of Engineering and Technology
             </p>
-
-            <a href="https://github.com/harikesh-7-reddy/Budget-App" target="_blank">
-                View Project →
-            </a>
-        </div>
-
-        <div class="project-card">
-            <h2>Rock Paper Scissors Game</h2>
 
             <p>
-                Interactive game built using HTML, CSS and JavaScript
-                with score tracking and responsive UI.
+                2023 – 2027
             </p>
-
-            <a href="https://github.com/harikesh-7-reddy/Rock-Paper-Scissors" target="_blank">
-                View Project →
-            </a>
-        </div>
-                <div class="project-card">
-            <h2>College-Bus-Tracker</h2>
 
             <p>
-                A real-time GPS-based web application for monitoring college buses using Google Maps and Firebase. Features live location updates, route tracking, stop detection, trip history, distance analytics, and role-based driver/viewer access.
+                CGPA: 7.85
             </p>
 
-            <a href="https://github.com/harikesh-7-reddy/bus-tracker" target="_blank">
-                View Project →
-            </a>
         </div>
 
-        <div class="project-card">
-            <h2>More Projects in GitHub</h2>
+    </section>
 
-            <a href="https://github.com/harikesh-7-reddy?tab=repositories" target="_blank">View More Projects →</a>
+
+    <!-- =========================
+         ACHIEVEMENTS
+    ========================== -->
+
+    <section class="hidden">
+
+        <h2 class="section-title">Achievements</h2>
+
+        <div class="achievement-list">
+
+            <div class="achievement-item">
+                <span>✓</span>
+                Solved 100+ Data Structures and Algorithms problems on LeetCode.
+            </div>
+
+            <div class="achievement-item">
+                <span>✓</span>
+                Earned Python Gold Badge on HackerRank.
+            </div>
+
+            <div class="achievement-item">
+                <span>✓</span>
+                Participated in Code-A-Thon.
+            </div>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
-<!-- Education -->
-<section id="education" class="hidden">
 
-    <h1 class="section-title">Education</h1>
+    <!-- =========================
+         CERTIFICATIONS
+    ========================== -->
 
-    <div class="edu-card">
-        <h2>B.Tech - Electronics & Communication Engineering</h2>
-        <p>sreyas institute of engineering and technology</p>
-        <p>2023 - 2027</p>
-    </div>
+    <section class="hidden">
 
-</section>
+        <h2 class="section-title">Certifications</h2>
 
-<!-- Achievements -->
-<section class="hidden">
+        <div class="certifications">
 
-    <h1 class="section-title">Achievements</h1>
+            <p>
+                Python Gold Badge — HackerRank
+                <br>
+                SQL Basic — HackerRank
+                <br>
+                Scientific Computing with Python — freeCodeCamp
+                <br>
+                Claude Code in Action — Anthropic
+                <br>
+                Shopify Developer Training — Digital Heroes
+            </p>
 
-    <ul class="achievement-list">
-        <li>⭐ Active HackerRank Practitioner</li>
-        <li>⭐ Active LeetCode Problem Solver</li>
-        <li>⭐ Developed Multiple Software Projects</li>
-        <li>⭐ Strong Foundation in Python and SQL</li>
-    </ul>
+            <div style="margin-top:25px;">
 
-</section>
+                <a
+                    href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link"
+                    class="btn-outline"
+                    target="_blank">
+                    View Certificates
+                </a>
 
-<!-- Contact -->
-<section id="contact" class="contact hidden">
+            </div>
 
-    <h1 class="section-title">Contact</h1>
+        </div>
 
-    <p><strong>Name:</strong> Ch Harikesh Reddy</p>
-    <p><strong>Email:</strong> chharikeshreddy@gmail.com</p>
-    <p><strong>Phone:</strong> +91 7842842616</p>
+    </section>
 
-    <div class="socials">
 
-        <a href="https://www.hackerrank.com/profile/chharikeshreddy" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png">
-        </a>
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
-        <a href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291" target="_blank">
-            <img src="https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png">
-        </a>
+    <section id="contact" class="contact hidden">
 
-        <a href="https://github.com/harikesh-7-reddy" target="_blank">
-            <img src="https://res.cloudinary.com/dhqvknalh/image/upload/v1778138399/github-6980894_640_f15zch.png">
-        </a>
+        <h2 class="section-title">Let's Connect</h2>
 
-        <a href="https://leetcode.com/u/harikesh-reddy/" target="_blank">
-            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png">
-        </a>
+        <div class="contact-box">
 
-    </div>
+            <p>
+                Interested in software development, full-stack applications,
+                backend systems or collaborative projects?
+            </p>
 
-</section>
+            <p>
+                <strong>Email:</strong>
+                chharikeshreddy@gmail.com
+            </p>
 
-<!-- Footer -->
-<footer>
-    <h3>Ch Harikesh Reddy</h3>
-    <p>Python Developer | Web Developer | ECE Student</p>
-    <p>© 2026 All Rights Reserved</p>
-</footer>
+            <p>
+                <strong>Phone:</strong>
+                +91 7842842616
+            </p>
 
-<script>
 
-/* Typing Effect */
-const roles = [
-"Python Developer",
-"Web Developer",
-"Problem Solver",
-"Embedded Systems Enthusiast"
-];
+            <div class="contact-buttons">
 
-let roleIndex = 0;
-let charIndex = 0;
+                <a
+                    href="mailto:chharikeshreddy@gmail.com"
+                    class="btn">
+                    Email Me
+                </a>
 
-function typeEffect(){
+                <a
+                    href="https://github.com/harikesh-7-reddy"
+                    class="btn-outline"
+                    target="_blank">
+                    GitHub
+                </a>
 
-    const currentRole = roles[roleIndex];
+            </div>
 
-    document.getElementById("typing").textContent =
-        currentRole.substring(0,charIndex);
 
-    charIndex++;
+            <div class="socials">
 
-    if(charIndex > currentRole.length){
-        roleIndex = (roleIndex + 1) % roles.length;
-        charIndex = 0;
-    }
+                <a
+                    href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291"
+                    target="_blank">
+                    LinkedIn
+                </a>
 
-    setTimeout(typeEffect,150);
-}
+                <a
+                    href="https://github.com/harikesh-7-reddy"
+                    target="_blank">
+                    GitHub
+                </a>
 
-typeEffect();
+                <a
+                    href="https://leetcode.com/u/harikesh-reddy/"
+                    target="_blank">
+                    LeetCode
+                </a>
 
-/* Scroll Animation */
-const observer = new IntersectionObserver(entries=>{
+                <a
+                    href="https://www.hackerrank.com/profile/chharikeshreddy"
+                    target="_blank">
+                    HackerRank
+                </a>
 
-entries.forEach(entry=>{
+            </div>
 
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
+        </div>
 
-});
+    </section>
 
-});
 
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
-});
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-</script>
+    <footer>
+
+        <h3>Ch Harikesh Reddy</h3>
+
+        <p>
+            Software Developer · Full-Stack Developer · ECE Student
+        </p>
+
+        <p>
+            © 2026 Ch Harikesh Reddy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           TYPING EFFECT
+        ========================== */
+
+        const roles = [
+            "Full-Stack Developer",
+            "Software Developer",
+            "React Developer",
+            "Python Developer",
+            "Problem Solver",
+            "IoT Enthusiast"
+        ];
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        const typingElement =
+            document.getElementById("typing");
+
+        function typeEffect() {
+
+            const currentRole =
+                roles[roleIndex];
+
+            if (!deleting) {
+
+                typingElement.textContent =
+                    currentRole.substring(0, charIndex + 1);
+
+                charIndex++;
+
+                if (charIndex === currentRole.length) {
+
+                    deleting = true;
+
+                    setTimeout(typeEffect, 1300);
+
+                    return;
+                }
+
+            } else {
+
+                typingElement.textContent =
+                    currentRole.substring(0, charIndex - 1);
+
+                charIndex--;
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    roleIndex =
+                        (roleIndex + 1) % roles.length;
+                }
+            }
+
+            setTimeout(
+                typeEffect,
+                deleting ? 60 : 100
+            );
+        }
+
+        typeEffect();
+
+
+        /* =========================
+           SCROLL ANIMATION
+        ========================== */
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        document
+            .querySelectorAll(".hidden")
+            .forEach(element => {
+
+                observer.observe(element);
+
+            });
+
+    </script>
 
 </body>
 </html>
-```
