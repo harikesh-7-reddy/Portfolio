@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,39 +16,54 @@
     <title>Ch Harikesh Reddy | Software Developer</title>
 
     <style>
+
         :root {
             --accent: #b6ff00;
-            --accent-dark: #92d900;
+            --accent-dark: #8fd400;
+
             --bg: #070707;
             --surface: #101010;
             --surface-2: #151515;
-            --border: rgba(255,255,255,0.10);
+
+            --border: rgba(255, 255, 255, 0.10);
+
             --text: #ffffff;
             --muted: #b7b7b7;
+
             --max-width: 1200px;
         }
+
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+
             scroll-behavior: smooth;
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
         }
+
 
         body {
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden;
         }
+
 
         a {
             color: inherit;
         }
 
+
         /* =========================
            NAVBAR
-        ========================= */
+        ========================== */
 
         .navbar {
             position: sticky;
@@ -60,18 +76,24 @@
 
             padding: 18px 6%;
 
-            background: rgba(7, 7, 7, 0.86);
+            background: rgba(7, 7, 7, 0.88);
             backdrop-filter: blur(14px);
 
             border-bottom: 1px solid var(--border);
         }
 
+
         .logo {
             color: var(--accent);
+
             font-size: 26px;
             font-weight: 800;
+
             text-decoration: none;
+
+            white-space: nowrap;
         }
+
 
         .nav-links {
             display: flex;
@@ -79,551 +101,1041 @@
             gap: 25px;
         }
 
+
         .nav-links a {
-            color: #fff;
+            color: white;
+
             text-decoration: none;
+
             font-size: 15px;
             font-weight: 600;
+
             transition: 0.3s;
         }
+
 
         .nav-links a:hover {
             color: var(--accent);
         }
 
+
         /* =========================
            HERO
-        ========================= */
+        ========================== */
 
         .hero {
             min-height: calc(100vh - 75px);
+
             max-width: var(--max-width);
+
             margin: auto;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             gap: 60px;
 
             padding: 80px 30px;
         }
 
+
         .hero-text {
             max-width: 680px;
         }
 
+
         .hero-text .intro {
             color: var(--muted);
+
             font-size: 18px;
+
             margin-bottom: 10px;
         }
 
+
         .hero-text h1 {
             font-size: clamp(42px, 6vw, 72px);
+
             line-height: 1.05;
+
             color: var(--accent);
+
             margin-bottom: 15px;
         }
 
+
         .hero-text h2 {
             font-size: clamp(22px, 3vw, 34px);
+
             margin-bottom: 20px;
         }
+
 
         #typing {
             color: var(--accent);
         }
 
+
         .hero-text p {
             color: #d5d5d5;
+
             font-size: 17px;
+
             max-width: 650px;
+
             line-height: 1.8;
         }
 
+
         .hero-buttons {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 15px;
+
             margin-top: 30px;
         }
 
+
         .btn {
             display: inline-block;
+
             padding: 13px 24px;
+
             border-radius: 8px;
+
             background: var(--accent);
+
             color: #000;
+
             text-decoration: none;
+
             font-weight: 700;
+
             transition: 0.3s;
         }
+
 
         .btn:hover {
             transform: translateY(-4px);
+
             background: var(--accent-dark);
         }
 
+
         .btn-outline {
             display: inline-block;
+
             padding: 11px 24px;
+
             border: 2px solid var(--accent);
+
             border-radius: 8px;
+
             color: var(--accent);
+
             text-decoration: none;
+
             font-weight: 700;
+
             transition: 0.3s;
         }
+
 
         .btn-outline:hover {
             transform: translateY(-4px);
+
             background: var(--accent);
+
             color: #000;
         }
 
+
         .hero-links {
             display: flex;
+
             gap: 20px;
+
             flex-wrap: wrap;
+
             margin-top: 25px;
         }
 
+
         .hero-links a {
             color: #ccc;
+
             text-decoration: none;
+
             font-weight: 600;
+
             transition: 0.3s;
         }
+
 
         .hero-links a:hover {
             color: var(--accent);
         }
 
+
         .hero-img {
             flex-shrink: 0;
         }
 
+
         .hero-img img {
             width: 320px;
             height: 320px;
+
             object-fit: cover;
+
             border-radius: 50%;
 
             border: 4px solid var(--accent);
-            box-shadow: 0 0 45px rgba(182,255,0,0.35);
+
+            box-shadow:
+                0 0 45px rgba(182, 255, 0, 0.35);
         }
 
+
         /* =========================
-           GENERAL SECTIONS
-        ========================= */
+           GENERAL
+        ========================== */
 
         section {
             max-width: var(--max-width);
+
             margin: auto;
+
             padding: 90px 30px;
         }
 
+
         .section-title {
             text-align: center;
+
             color: var(--accent);
+
             font-size: clamp(32px, 4vw, 44px);
+
             margin-bottom: 45px;
         }
 
+
         .section-subtitle {
             text-align: center;
+
             max-width: 760px;
+
             margin: -20px auto 45px;
+
             color: var(--muted);
         }
 
+
         /* =========================
            ABOUT
-        ========================= */
+        ========================== */
 
         .about-content {
             max-width: 900px;
+
             margin: auto;
+
             text-align: center;
         }
+
 
         .about-content p {
             color: #d2d2d2;
+
             font-size: 17px;
+
             line-height: 1.9;
         }
 
+
         /* =========================
            STATS
-        ========================= */
+        ========================== */
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
+
         .stat-box {
             background: var(--surface);
+
             border: 1px solid var(--border);
+
             border-radius: 15px;
+
             padding: 30px;
+
             text-align: center;
+
             transition: 0.3s;
         }
 
+
         .stat-box:hover {
             border-color: var(--accent);
+
             transform: translateY(-5px);
         }
 
+
         .stat-box h3 {
             color: var(--accent);
+
             font-size: 40px;
+
             margin-bottom: 5px;
         }
+
 
         .stat-box p {
             color: #ccc;
         }
 
+
         /* =========================
            SKILLS
-        ========================= */
+        ========================== */
 
         .skills-container {
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
             gap: 14px;
+
             max-width: 900px;
+
             margin: auto;
         }
 
+
         .skill-card {
             padding: 12px 18px;
+
             border-radius: 8px;
+
             background: var(--surface);
+
             border: 1px solid var(--border);
+
             color: #eee;
+
             font-weight: 600;
+
             transition: 0.3s;
         }
+
 
         .skill-card:hover {
             background: var(--accent);
+
             color: #000;
+
             transform: translateY(-4px);
         }
 
+
         /* =========================
            PROJECTS
-        ========================= */
+        ========================== */
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 25px;
         }
 
+
         .project-card {
             position: relative;
-            background: linear-gradient(
-                145deg,
-                var(--surface-2),
-                var(--surface)
-            );
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--surface-2),
+                    var(--surface)
+                );
 
             padding: 28px;
+
             border-radius: 18px;
+
             border: 1px solid var(--border);
 
             transition: 0.3s;
         }
 
+
         .project-card:hover {
             transform: translateY(-8px);
+
             border-color: var(--accent);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.35);
         }
+
 
         .project-number {
             color: var(--accent);
+
             font-size: 13px;
+
             font-weight: 700;
+
             letter-spacing: 1px;
+
             margin-bottom: 10px;
         }
 
+
         .project-card h3 {
             font-size: 25px;
+
             margin-bottom: 8px;
         }
 
+
         .project-stack {
             color: var(--accent);
+
             font-size: 14px;
+
             font-weight: 700;
+
             margin-bottom: 16px;
         }
 
+
         .project-card p {
             color: #c6c6c6;
+
             line-height: 1.75;
         }
 
+
         .project-features {
             margin: 18px 0;
+
             padding-left: 18px;
+
             color: #ddd;
         }
+
 
         .project-features li {
             margin-bottom: 7px;
         }
 
+
         .project-link {
             display: inline-block;
+
             margin-top: 10px;
+
             color: var(--accent);
+
             text-decoration: none;
+
             font-weight: 700;
+
             transition: 0.3s;
         }
+
 
         .project-link:hover {
             transform: translateX(5px);
         }
 
+
         .featured {
             grid-column: span 2;
-            border-color: rgba(182,255,0,0.35);
+
+            border-color:
+                rgba(182, 255, 0, 0.35);
         }
+
 
         /* =========================
            EDUCATION
-        ========================= */
+        ========================== */
 
         .education-card {
             max-width: 850px;
+
             margin: auto;
+
             background: var(--surface);
+
             border: 1px solid var(--border);
+
             border-radius: 16px;
+
             padding: 32px;
+
             text-align: center;
         }
+
 
         .education-card h3 {
             color: var(--accent);
+
             font-size: 25px;
+
             margin-bottom: 10px;
         }
 
+
         .education-card p {
             color: #ccc;
+
             margin: 5px 0;
         }
 
+
         /* =========================
            ACHIEVEMENTS
-        ========================= */
+        ========================== */
 
         .achievement-list {
             max-width: 800px;
+
             margin: auto;
+
             display: grid;
+
             gap: 15px;
         }
 
+
         .achievement-item {
             background: var(--surface);
+
             border: 1px solid var(--border);
+
             border-radius: 12px;
+
             padding: 18px 22px;
+
             color: #ddd;
         }
 
+
         .achievement-item span {
             color: var(--accent);
+
             margin-right: 8px;
         }
 
+
         /* =========================
            CERTIFICATIONS
-        ========================= */
+        ========================== */
 
-        .certifications {
-            max-width: 850px;
-            margin: auto;
+        .certifications-grid {
+            max-width: 1050px;
+
+            margin:
+                0 auto 35px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .certificate-card {
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #0f0f0f
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            padding: 24px;
+
+            transition:
+                all 0.3s ease;
+        }
+
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+
+            border-color: var(--accent);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+
+        .certificate-icon {
+            width: 58px;
+            height: 58px;
+
+            min-width: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(182, 255, 0, 0.08);
+
+            border:
+                1px solid
+                rgba(182, 255, 0, 0.35);
+
+            color: var(--accent);
+        }
+
+
+        .certificate-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+
+        .certificate-content h3 {
+            font-size: 18px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .certificate-content p {
+            color: #aaa;
+
+            font-size: 14px;
+        }
+
+
+        .certifications-action {
             text-align: center;
         }
 
-        .certifications p {
-            color: #ccc;
-            line-height: 2;
-        }
 
         /* =========================
            CONTACT
-        ========================= */
+        ========================== */
 
         .contact {
             text-align: center;
         }
 
+
         .contact-box {
-            max-width: 800px;
+            max-width: 950px;
+
             margin: auto;
-            background: var(--surface);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #0e0e0e
+                );
+
             border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 40px;
+
+            border-radius: 20px;
+
+            padding: 45px 35px;
         }
 
-        .contact-box p {
-            color: #ccc;
-            margin: 10px 0;
-            font-size: 17px;
+
+        .contact-intro {
+            max-width: 650px;
+
+            margin:
+                0 auto 30px;
+
+            text-align: center;
+
+            color: #cfcfcf;
+
+            line-height: 1.8;
         }
 
-        .contact-buttons {
-            margin-top: 25px;
+
+        .contact-details {
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
-            gap: 15px;
+
+            gap: 12px;
+
+            margin-bottom: 35px;
         }
 
-        /* =========================
-           SOCIAL LINKS
-        ========================= */
 
-        .socials {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-top: 30px;
-        }
+        .contact-detail {
+            padding: 12px 18px;
 
-        .socials a {
+            background: #111;
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
             color: #ddd;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
+
+            font-size: 15px;
+
+            max-width: 100%;
+
+            overflow-wrap: anywhere;
         }
 
-        .socials a:hover {
+
+        .contact-detail strong {
             color: var(--accent);
         }
+
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+
+        /* =========================
+           SOCIAL CARDS
+        ========================== */
+
+        .socials {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+
+        .social-card {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 16px 12px;
+
+            background: #111;
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            color: #ddd;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition:
+                all 0.3s ease;
+        }
+
+
+        .social-card:hover {
+            color: #000;
+
+            background: var(--accent);
+
+            border-color: var(--accent);
+
+            transform: translateY(-5px);
+        }
+
+
+        .social-card svg {
+            width: 23px;
+            height: 23px;
+
+            flex-shrink: 0;
+        }
+
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
             text-align: center;
+
             padding: 35px 20px;
+
             margin-top: 50px;
-            border-top: 1px solid var(--border);
+
+            border-top:
+                1px solid var(--border);
+
             background: #0c0c0c;
         }
 
+
         footer h3 {
             color: var(--accent);
+
             margin-bottom: 5px;
         }
+
 
         footer p {
             color: #aaa;
         }
 
+
         /* =========================
            ANIMATION
-        ========================= */
+        ========================== */
 
         .hidden {
             opacity: 0;
+
             transform: translateY(35px);
-            transition: all 0.8s ease;
+
+            transition:
+                all 0.8s ease;
         }
+
 
         .show {
             opacity: 1;
+
             transform: translateY(0);
         }
 
+
         /* =========================
-           MOBILE
-        ========================= */
+           TABLET
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .navbar {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+
+            .nav-links {
+                gap: 16px;
+            }
+
+
+            .hero {
+                gap: 40px;
+            }
+
+
+            .hero-img img {
+                width: 280px;
+                height: 280px;
+            }
+
+
+            .socials {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           TABLET / MOBILE
+        ========================== */
 
         @media (max-width: 900px) {
 
             .hero {
                 flex-direction: column-reverse;
+
                 text-align: center;
+
                 padding-top: 60px;
             }
+
 
             .hero-text {
                 margin: auto;
             }
+
 
             .hero-buttons,
             .hero-links {
                 justify-content: center;
             }
 
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
 
             .featured {
                 grid-column: span 1;
             }
 
+
             .stats {
                 grid-template-columns: 1fr;
             }
+
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 768px) {
 
             .navbar {
                 flex-direction: column;
+
                 gap: 14px;
-                padding: 16px 20px;
+
+                padding:
+                    16px 20px;
             }
 
+
+            .logo {
+                font-size: 23px;
+            }
+
+
             .nav-links {
-                gap: 15px;
+                gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
+
 
             .nav-links a {
                 font-size: 13px;
             }
 
+
             .hero {
                 min-height: auto;
-                padding: 70px 20px 50px;
+
+                padding:
+                    65px 20px
+                    50px;
             }
+
 
             .hero-img img {
                 width: 240px;
                 height: 240px;
             }
 
+
             section {
-                padding: 70px 20px;
+                padding:
+                    70px 20px;
             }
+
 
             .project-card {
                 padding: 23px;
             }
+
+
+            .contact-box {
+                padding:
+                    30px 18px;
+            }
+
+
+            .contact-details {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .contact-detail {
+                text-align: center;
+            }
+
+
+            .socials {
+                grid-template-columns: 1fr;
+            }
+
+
+            .social-card {
+                padding: 15px;
+            }
+
         }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================== */
 
         @media (max-width: 500px) {
 
@@ -631,28 +1143,76 @@
                 font-size: 42px;
             }
 
+
             .hero-text h2 {
                 font-size: 22px;
             }
+
 
             .hero-text p {
                 font-size: 15px;
             }
 
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+
             .hero-buttons a {
                 width: 100%;
+
                 text-align: center;
             }
+
+
+            .hero-links {
+                gap: 15px;
+            }
+
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
 
             .contact-buttons a {
                 width: 100%;
+
                 text-align: center;
             }
+
+
+            .certificate-card {
+                padding: 20px;
+            }
+
+
+            .certificate-icon {
+                width: 50px;
+                height: 50px;
+
+                min-width: 50px;
+            }
+
+
+            .certificate-content h3 {
+                font-size: 16px;
+            }
+
+
+            .certificate-content p {
+                font-size: 13px;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVBAR
@@ -660,20 +1220,41 @@
 
     <nav class="navbar">
 
-        <a href="#home" class="logo">Harikesh Reddy</a>
+        <a href="#home" class="logo">
+            Harikesh Reddy
+        </a>
+
 
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#education">
+                Education
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
 
             <a
                 href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link"
                 target="_blank">
+
                 Certificates
+
             </a>
+
         </div>
 
     </nav>
@@ -685,57 +1266,90 @@
 
     <section class="hero" id="home">
 
+
         <div class="hero-text">
 
-            <p class="intro">Hello, I'm</p>
-
-            <h1>Ch Harikesh Reddy</h1>
-
-            <h2>
-                <span id="typing"></span>
-            </h2>
-
-            <p>
-                Electronics and Communication Engineering student focused on
-                building real-world software applications using React,
-                JavaScript, TypeScript, Python, SQL, Firebase and APIs.
-                I enjoy solving problems, designing practical systems and
-                continuously improving my software engineering skills.
+            <p class="intro">
+                Hello, I'm
             </p>
 
+
+            <h1>
+                Ch Harikesh Reddy
+            </h1>
+
+
+            <h2>
+
+                <span id="typing"></span>
+
+            </h2>
+
+
+            <p>
+
+                Electronics and Communication Engineering student
+                focused on building real-world software applications
+                using React, JavaScript, TypeScript, Python, SQL,
+                Firebase and APIs.
+
+                I enjoy solving problems, designing practical systems
+                and continuously improving my software engineering skills.
+
+            </p>
+
+
             <div class="hero-buttons">
+
 
                 <a
                     href="https://docs.google.com/document/d/1mj1omTavipMTGXOTjq9TEn_iK16cFCLycRHobXAE3IQ/edit?usp=sharing"
                     class="btn"
                     target="_blank">
+
                     Download Resume
+
                 </a>
 
-                <a href="#projects" class="btn-outline">
+
+                <a
+                    href="#projects"
+                    class="btn-outline">
+
                     View Projects
+
                 </a>
+
 
             </div>
+
 
             <div class="hero-links">
 
                 <a
                     href="https://github.com/harikesh-7-reddy"
                     target="_blank">
+
                     GitHub →
+
                 </a>
+
 
                 <a
                     href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291"
                     target="_blank">
+
                     LinkedIn →
+
                 </a>
+
 
                 <a
                     href="https://leetcode.com/u/harikesh-reddy/"
                     target="_blank">
+
                     LeetCode →
+
                 </a>
 
             </div>
@@ -758,18 +1372,27 @@
          ABOUT
     ========================== -->
 
-    <section id="about" class="hidden">
+    <section
+        id="about"
+        class="hidden">
 
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">
+            About Me
+        </h2>
+
 
         <div class="about-content">
 
             <p>
-                I am an Electronics and Communication Engineering student
-                passionate about software development and building practical
-                technology solutions. My projects span real-time web
-                applications, full-stack development, AI-powered systems,
+
+                I am an Electronics and Communication Engineering
+                student passionate about software development and
+                building practical technology solutions.
+
+                My projects span real-time web applications,
+                full-stack development, AI-powered systems,
                 database applications and embedded/IoT projects.
+
             </p>
 
         </div>
@@ -783,33 +1406,48 @@
 
     <section class="hidden">
 
+
         <div class="stats">
 
+
             <div class="stat-box">
 
-                <h3>100+</h3>
+                <h3>
+                    100+
+                </h3>
 
-                <p>LeetCode Problems</p>
+                <p>
+                    LeetCode Problems
+                </p>
 
             </div>
 
 
             <div class="stat-box">
 
-                <h3>8+</h3>
+                <h3>
+                    8+
+                </h3>
 
-                <p>Projects</p>
+                <p>
+                    Projects
+                </p>
 
             </div>
 
 
             <div class="stat-box">
 
-                <h3>10+</h3>
+                <h3>
+                    10+
+                </h3>
 
-                <p>Technologies</p>
+                <p>
+                    Technologies
+                </p>
 
             </div>
+
 
         </div>
 
@@ -820,44 +1458,117 @@
          SKILLS
     ========================== -->
 
-    <section id="skills" class="hidden">
+    <section
+        id="skills"
+        class="hidden">
 
-        <h2 class="section-title">Technical Skills</h2>
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
 
         <p class="section-subtitle">
+
             Technologies and concepts I use to build web applications,
-            backend systems, database-driven applications and embedded projects.
+            backend systems, database-driven applications and
+            embedded projects.
+
         </p>
 
 
         <div class="skills-container">
 
-            <div class="skill-card">Python</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">TypeScript</div>
-            <div class="skill-card">SQL</div>
 
-            <div class="skill-card">React.js</div>
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">Node.js</div>
+            <div class="skill-card">
+                Python
+            </div>
 
-            <div class="skill-card">REST APIs</div>
-            <div class="skill-card">Firebase</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">Google Maps API</div>
+            <div class="skill-card">
+                JavaScript
+            </div>
 
-            <div class="skill-card">Git</div>
-            <div class="skill-card">GitHub</div>
-            <div class="skill-card">GitHub Actions</div>
+            <div class="skill-card">
+                TypeScript
+            </div>
 
-            <div class="skill-card">DSA</div>
-            <div class="skill-card">OOP</div>
-            <div class="skill-card">Authentication</div>
-            <div class="skill-card">Database Design</div>
+            <div class="skill-card">
+                SQL
+            </div>
 
-            <div class="skill-card">Embedded Systems</div>
-            <div class="skill-card">IoT</div>
+
+            <div class="skill-card">
+                React.js
+            </div>
+
+            <div class="skill-card">
+                HTML5
+            </div>
+
+            <div class="skill-card">
+                CSS3
+            </div>
+
+            <div class="skill-card">
+                Node.js
+            </div>
+
+
+            <div class="skill-card">
+                REST APIs
+            </div>
+
+            <div class="skill-card">
+                Firebase
+            </div>
+
+            <div class="skill-card">
+                MySQL
+            </div>
+
+            <div class="skill-card">
+                Google Maps API
+            </div>
+
+
+            <div class="skill-card">
+                Git
+            </div>
+
+            <div class="skill-card">
+                GitHub
+            </div>
+
+            <div class="skill-card">
+                GitHub Actions
+            </div>
+
+
+            <div class="skill-card">
+                DSA
+            </div>
+
+            <div class="skill-card">
+                OOP
+            </div>
+
+            <div class="skill-card">
+                Authentication
+            </div>
+
+            <div class="skill-card">
+                Database Design
+            </div>
+
+
+            <div class="skill-card">
+                Embedded Systems
+            </div>
+
+            <div class="skill-card">
+                IoT
+            </div>
+
 
         </div>
 
@@ -868,37 +1579,57 @@
          PROJECTS
     ========================== -->
 
-    <section id="projects" class="hidden">
+    <section
+        id="projects"
+        class="hidden">
 
-        <h2 class="section-title">Featured Projects</h2>
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
 
         <p class="section-subtitle">
+
             A selection of projects focused on real-world problems,
             full-stack development, APIs, databases, AI and IoT.
+
         </p>
 
 
         <div class="projects-grid">
 
 
-            <!-- 01 BUS TRACKER -->
+            <!-- 01 -->
 
             <div class="project-card featured">
+
 
                 <div class="project-number">
                     01 — FEATURED PROJECT
                 </div>
 
-                <h3>College Bus Tracker</h3>
+
+                <h3>
+                    College Bus Tracker
+                </h3>
+
 
                 <div class="project-stack">
+
                     React.js · Firebase · Google Maps API
+
                 </div>
 
+
                 <p>
-                    A real-time GPS-based college bus tracking application
-                    designed to monitor buses, routes and trips.
+
+                    A real-time GPS-based college bus tracking
+                    application designed to monitor buses,
+                    routes and trips.
+
                 </p>
+
 
                 <ul class="project-features">
 
@@ -920,35 +1651,49 @@
 
                 </ul>
 
+
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/bus-tracker"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 02 PAGE PULSE -->
+            <!-- 02 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     02
                 </div>
 
-                <h3>Page Pulse</h3>
+
+                <h3>
+                    Page Pulse
+                </h3>
+
 
                 <div class="project-stack">
+
                     JavaScript · React · Node.js · Express
+
                 </div>
 
+
                 <p>
-                    A web analysis application designed to inspect website
-                    health and page-level information through a dedicated
-                    frontend and backend architecture.
+
+                    A web analysis application designed to inspect
+                    website health and page-level information through
+                    a dedicated frontend and backend architecture.
+
                 </p>
+
 
                 <ul class="project-features">
 
@@ -966,35 +1711,49 @@
 
                 </ul>
 
+
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/page-pulse"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 03 JOBSERCHER -->
+            <!-- 03 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     03
                 </div>
 
-                <h3>Jobsercher</h3>
+
+                <h3>
+                    Jobsercher
+                </h3>
+
 
                 <div class="project-stack">
+
                     JavaScript · Web Development
+
                 </div>
 
+
                 <p>
-                    A web project focused on job-search functionality and
-                    presenting relevant opportunities through a user-facing
-                    application.
+
+                    A web project focused on job-search functionality
+                    and presenting relevant opportunities through
+                    a user-facing application.
+
                 </p>
+
 
                 <ul class="project-features">
 
@@ -1012,35 +1771,49 @@
 
                 </ul>
 
+
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/jobsercher"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 04 PHARMA -->
+            <!-- 04 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     04
                 </div>
 
-                <h3>PharmaComplaint AI</h3>
+
+                <h3>
+                    PharmaComplaint AI
+                </h3>
+
 
                 <div class="project-stack">
+
                     JavaScript · AI · Full Stack
+
                 </div>
 
+
                 <p>
-                    An AI-focused application for handling and working with
-                    pharmaceutical complaint data using a dedicated frontend
-                    and backend architecture.
+
+                    An AI-focused application for handling and
+                    working with pharmaceutical complaint data
+                    using a dedicated frontend and backend architecture.
+
                 </p>
+
 
                 <ul class="project-features">
 
@@ -1058,65 +1831,92 @@
 
                 </ul>
 
+
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/pharmacomplaint-ai"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 05 INVENTORY -->
+            <!-- 05 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     05
                 </div>
 
-                <h3>Inventory Management Dashboard</h3>
+
+                <h3>
+                    Inventory Management Dashboard
+                </h3>
+
 
                 <div class="project-stack">
+
                     TypeScript
+
                 </div>
 
+
                 <p>
-                    A dashboard-oriented application focused on presenting
-                    and managing inventory information through a modern
-                    TypeScript-based interface.
+
+                    A dashboard-oriented application focused on
+                    presenting and managing inventory information
+                    through a modern TypeScript-based interface.
+
                 </p>
+
 
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/Inventory-Management-Dashboard"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 06 BUDGET -->
+            <!-- 06 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     06
                 </div>
 
-                <h3>Budget Management Application</h3>
+
+                <h3>
+                    Budget Management Application
+                </h3>
+
 
                 <div class="project-stack">
+
                     Python · MySQL
+
                 </div>
 
+
                 <p>
-                    An expense management application for tracking income
-                    and expenses using Python and SQL with a structured
-                    database design.
+
+                    An expense management application for tracking
+                    income and expenses using Python and SQL with
+                    a structured database design.
+
                 </p>
+
 
                 <ul class="project-features">
 
@@ -1134,63 +1934,91 @@
 
                 </ul>
 
+
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/Budget-App"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 07 SRIVASTRA -->
+            <!-- 07 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     07
                 </div>
 
-                <h3>Srivastra</h3>
+
+                <h3>
+                    Srivastra
+                </h3>
+
 
                 <div class="project-stack">
+
                     HTML · Web Development
+
                 </div>
 
+
                 <p>
-                    A web project focused on presenting a responsive and
-                    visually oriented user experience.
+
+                    A web project focused on presenting a
+                    responsive and visually oriented user experience.
+
                 </p>
+
 
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/Srivastra"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- 08 ESP32 -->
+            <!-- 08 -->
 
             <div class="project-card">
+
 
                 <div class="project-number">
                     08
                 </div>
 
-                <h3>ESP32 Fish Feeder</h3>
+
+                <h3>
+                    ESP32 Fish Feeder
+                </h3>
+
 
                 <div class="project-stack">
+
                     C++ · ESP32 · IoT
+
                 </div>
 
+
                 <p>
-                    An embedded/IoT project using an ESP32 to automate fish
-                    feeding through hardware control and connected software.
+
+                    An embedded/IoT project using an ESP32 to
+                    automate fish feeding through hardware control
+                    and connected software.
+
                 </p>
+
 
                 <ul class="project-features">
 
@@ -1208,43 +2036,59 @@
 
                 </ul>
 
+
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy/ESP32-Fish-Feeder"
                     target="_blank">
+
                     View on GitHub →
+
                 </a>
 
             </div>
 
 
-            <!-- MORE PROJECTS -->
+            <!-- MORE -->
 
             <div class="project-card">
 
+
                 <div class="project-number">
-                    MORE
+                    MORE PROJECTS
                 </div>
 
-                <h3>More Projects</h3>
+
+                <h3>
+                    Explore My GitHub
+                </h3>
+
 
                 <div class="project-stack">
-                    GitHub Repository
+                    More Projects & Experiments
                 </div>
 
+
                 <p>
-                    Explore my complete collection of software, Python,
-                    frontend, embedded and experimental projects.
+
+                    Explore my complete collection of software,
+                    Python, frontend, embedded and experimental
+                    projects.
+
                 </p>
+
 
                 <a
                     class="project-link"
                     href="https://github.com/harikesh-7-reddy?tab=repositories"
                     target="_blank">
+
                     View All Repositories →
+
                 </a>
 
             </div>
+
 
         </div>
 
@@ -1255,27 +2099,38 @@
          EDUCATION
     ========================== -->
 
-    <section id="education" class="hidden">
+    <section
+        id="education"
+        class="hidden">
 
-        <h2 class="section-title">Education</h2>
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
 
         <div class="education-card">
+
 
             <h3>
                 B.Tech — Electronics & Communication Engineering
             </h3>
 
+
             <p>
                 Sreyas Institute of Engineering and Technology
             </p>
+
 
             <p>
                 2023 – 2027
             </p>
 
+
             <p>
                 CGPA: 7.85
             </p>
+
 
         </div>
 
@@ -1288,24 +2143,42 @@
 
     <section class="hidden">
 
-        <h2 class="section-title">Achievements</h2>
+
+        <h2 class="section-title">
+            Achievements
+        </h2>
+
 
         <div class="achievement-list">
 
-            <div class="achievement-item">
-                <span>✓</span>
-                Solved 100+ Data Structures and Algorithms problems on LeetCode.
-            </div>
 
             <div class="achievement-item">
+
                 <span>✓</span>
+
+                Solved 100+ Data Structures and Algorithms
+                problems on LeetCode.
+
+            </div>
+
+
+            <div class="achievement-item">
+
+                <span>✓</span>
+
                 Earned Python Gold Badge on HackerRank.
+
             </div>
 
+
             <div class="achievement-item">
+
                 <span>✓</span>
+
                 Participated in Code-A-Thon.
+
             </div>
+
 
         </div>
 
@@ -1318,32 +2191,246 @@
 
     <section class="hidden">
 
-        <h2 class="section-title">Certifications</h2>
 
-        <div class="certifications">
+        <h2 class="section-title">
+            Certifications
+        </h2>
 
-            <p>
-                Python Gold Badge — HackerRank
-                <br>
-                SQL Basic — HackerRank
-                <br>
-                Scientific Computing with Python — freeCodeCamp
-                <br>
-                Claude Code in Action — Anthropic
-                <br>
-                Shopify Developer Training — Digital Heroes
-            </p>
 
-            <div style="margin-top:25px;">
+        <p class="section-subtitle">
 
-                <a
-                    href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link"
-                    class="btn-outline"
-                    target="_blank">
-                    View Certificates
-                </a>
+            Certifications and learning achievements that support
+            my software development and technical skills.
+
+        </p>
+
+
+        <div class="certifications-grid">
+
+
+            <!-- PYTHON -->
+
+            <div class="certificate-card">
+
+
+                <div class="certificate-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8">
+
+                        <path
+                            d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" />
+
+                        <path
+                            d="M9 12l2 2 4-4" />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Python Gold Badge
+                    </h3>
+
+                    <p>
+                        HackerRank
+                    </p>
+
+                </div>
 
             </div>
+
+
+            <!-- SQL -->
+
+            <div class="certificate-card">
+
+
+                <div class="certificate-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8">
+
+                        <ellipse
+                            cx="12"
+                            cy="6"
+                            rx="7"
+                            ry="3" />
+
+                        <path
+                            d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" />
+
+                        <path
+                            d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+                    <h3>
+                        SQL Basic
+                    </h3>
+
+                    <p>
+                        HackerRank
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PYTHON SCIENTIFIC -->
+
+            <div class="certificate-card">
+
+
+                <div class="certificate-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8">
+
+                        <path
+                            d="M7 3h10v18H7z" />
+
+                        <path
+                            d="M10 7h4" />
+
+                        <path
+                            d="M10 11h4" />
+
+                        <path
+                            d="M10 15h4" />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Scientific Computing with Python
+                    </h3>
+
+                    <p>
+                        freeCodeCamp
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CLAUDE -->
+
+            <div class="certificate-card">
+
+
+                <div class="certificate-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8">
+
+                        <path
+                            d="M4 5h16v14H4z" />
+
+                        <path
+                            d="M8 9l3 3-3 3" />
+
+                        <path
+                            d="M13 15h3" />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Claude Code in Action
+                    </h3>
+
+                    <p>
+                        Anthropic
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SHOPIFY -->
+
+            <div class="certificate-card">
+
+
+                <div class="certificate-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8">
+
+                        <path
+                            d="M6 7h12l1 14H5L6 7z" />
+
+                        <path
+                            d="M9 7a3 3 0 0 1 6 0" />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Shopify Developer Training
+                    </h3>
+
+                    <p>
+                        Digital Heroes
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="certifications-action">
+
+            <a
+                href="https://drive.google.com/drive/folders/18PwQphWU5U61umf2Od4ZbP3aP185Yk1E?usp=drive_link"
+                class="btn"
+                target="_blank">
+
+                View All Certificates →
+
+            </a>
 
         </div>
 
@@ -1354,71 +2441,196 @@
          CONTACT
     ========================== -->
 
-    <section id="contact" class="contact hidden">
+    <section
+        id="contact"
+        class="contact hidden">
 
-        <h2 class="section-title">Let's Connect</h2>
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            I'm always open to connecting with developers,
+            recruiters, companies and people interested in
+            building useful technology.
+
+        </p>
+
 
         <div class="contact-box">
 
-            <p>
-                Interested in software development, full-stack applications,
-                backend systems or collaborative projects?
-            </p>
 
-            <p>
-                <strong>Email:</strong>
-                chharikeshreddy@gmail.com
-            </p>
+            <div class="contact-intro">
 
-            <p>
-                <strong>Phone:</strong>
-                +91 7842842616
-            </p>
+                <p>
 
+                    Feel free to reach out through email or
+                    connect with me on any of the platforms below.
 
-            <div class="contact-buttons">
-
-                <a
-                    href="mailto:chharikeshreddy@gmail.com"
-                    class="btn">
-                    Email Me
-                </a>
-
-                <a
-                    href="https://github.com/harikesh-7-reddy"
-                    class="btn-outline"
-                    target="_blank">
-                    GitHub
-                </a>
+                </p>
 
             </div>
 
 
-            <div class="socials">
+            <!-- CONTACT DETAILS -->
+
+            <div class="contact-details">
+
+
+                <div class="contact-detail">
+
+                    <strong>
+                        Email:
+                    </strong>
+
+                    chharikeshreddy@gmail.com
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <strong>
+                        Phone:
+                    </strong>
+
+                    +91 7842842616
+
+                </div>
+
+
+            </div>
+
+
+            <!-- MAIN BUTTONS -->
+
+            <div class="contact-buttons">
+
 
                 <a
-                    href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291"
-                    target="_blank">
-                    LinkedIn
+                    href="mailto:chharikeshreddy@gmail.com"
+                    class="btn">
+
+                    Email Me
+
                 </a>
+
+
+                <a
+                    href="https://docs.google.com/document/d/1mj1omTavipMTGXOTjq9TEn_iK16cFCLycRHobXAE3IQ/edit?usp=sharing"
+                    class="btn-outline"
+                    target="_blank">
+
+                    View Resume
+
+                </a>
+
+
+            </div>
+
+
+            <!-- SOCIAL PROFILES -->
+
+            <div class="socials">
+
+
+                <!-- GITHUB -->
 
                 <a
                     href="https://github.com/harikesh-7-reddy"
+                    class="social-card"
                     target="_blank">
+
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor">
+
+                        <path
+                            d="M12 .5A11.5 11.5 0 0 0 8.36 23c.58.1.79-.25.79-.56v-2.16c-3.23.7-3.91-1.39-3.91-1.39-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.58-.29-5.29-1.29-5.29-5.74 0-1.27.45-2.31 1.19-3.12-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.79 0c2.21-1.5 3.18-1.19 3.18-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.12 0 4.46-2.72 5.44-5.31 5.73.41.35.78 1.04.78 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z" />
+
+                    </svg>
+
+
                     GitHub
+
                 </a>
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/chinthala-harikesh-reddy-779257291"
+                    class="social-card"
+                    target="_blank">
+
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor">
+
+                        <path
+                            d="M5.2 3.3A2.3 2.3 0 1 1 5.2 8a2.3 2.3 0 0 1 0-4.7zM3.2 9.2h4v11.5h-4V9.2zm6.4 0h3.8v1.6h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6v5.8h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7v5.2h-4V9.2z" />
+
+                    </svg>
+
+
+                    LinkedIn
+
+                </a>
+
+
+                <!-- LEETCODE -->
 
                 <a
                     href="https://leetcode.com/u/harikesh-reddy/"
+                    class="social-card"
                     target="_blank">
+
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor">
+
+                        <path
+                            d="M15.4 4.2 13.8 5.8l2.9 2.9-7.1 7.1 1.6 1.6 7.1-7.1 2.1 2.1 1.6-1.6-6.6-6.6z" />
+
+                        <path
+                            d="M8.2 5.7 4.3 9.6a4.2 4.2 0 0 0 0 6l4.1 4.1a4.2 4.2 0 0 0 6 0l1.2-1.2-1.6-1.6-1.2 1.2a2 2 0 0 1-2.8 0L5.9 14a2 2 0 0 1 0-2.8l3.9-3.9-1.6-1.6z" />
+
+                    </svg>
+
+
                     LeetCode
+
                 </a>
+
+
+                <!-- HACKERRANK -->
 
                 <a
                     href="https://www.hackerrank.com/profile/chharikeshreddy"
+                    class="social-card"
                     target="_blank">
+
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor">
+
+                        <path
+                            d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 3 5.9 3.3L12 11.6 6.1 8.3 12 5zm-7 5 5.9 3.3v5.2L5 15.2V10zm8.1 8.5v-5.2L19 10v5.2l-5.9 3.3z" />
+
+                    </svg>
+
+
                     HackerRank
+
                 </a>
+
 
             </div>
 
@@ -1433,15 +2645,21 @@
 
     <footer>
 
-        <h3>Ch Harikesh Reddy</h3>
+
+        <h3>
+            Ch Harikesh Reddy
+        </h3>
+
 
         <p>
             Software Developer · Full-Stack Developer · ECE Student
         </p>
 
+
         <p>
             © 2026 Ch Harikesh Reddy. All Rights Reserved.
         </p>
+
 
     </footer>
 
@@ -1452,70 +2670,107 @@
 
     <script>
 
+
         /* =========================
            TYPING EFFECT
         ========================== */
 
         const roles = [
+
             "Full-Stack Developer",
             "Software Developer",
             "React Developer",
             "Python Developer",
             "Problem Solver",
             "IoT Enthusiast"
+
         ];
 
+
         let roleIndex = 0;
+
         let charIndex = 0;
+
         let deleting = false;
+
 
         const typingElement =
             document.getElementById("typing");
 
+
         function typeEffect() {
+
 
             const currentRole =
                 roles[roleIndex];
 
+
             if (!deleting) {
 
+
                 typingElement.textContent =
-                    currentRole.substring(0, charIndex + 1);
+                    currentRole.substring(
+                        0,
+                        charIndex + 1
+                    );
+
 
                 charIndex++;
 
-                if (charIndex === currentRole.length) {
+
+                if (
+                    charIndex ===
+                    currentRole.length
+                ) {
 
                     deleting = true;
 
-                    setTimeout(typeEffect, 1300);
+                    setTimeout(
+                        typeEffect,
+                        1300
+                    );
 
                     return;
                 }
 
+
             } else {
 
+
                 typingElement.textContent =
-                    currentRole.substring(0, charIndex - 1);
+                    currentRole.substring(
+                        0,
+                        charIndex - 1
+                    );
+
 
                 charIndex--;
+
 
                 if (charIndex === 0) {
 
                     deleting = false;
 
                     roleIndex =
-                        (roleIndex + 1) % roles.length;
+                        (
+                            roleIndex + 1
+                        ) % roles.length;
+
                 }
+
             }
+
 
             setTimeout(
                 typeEffect,
                 deleting ? 60 : 100
             );
+
         }
 
+
         typeEffect();
+
 
 
         /* =========================
@@ -1527,15 +2782,23 @@
 
                 entries => {
 
-                    entries.forEach(entry => {
 
-                        if (entry.isIntersecting) {
+                    entries.forEach(
+                        entry => {
 
-                            entry.target.classList.add("show");
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target
+                                    .classList
+                                    .add("show");
+
+                            }
 
                         }
-
-                    });
+                    );
 
                 },
 
@@ -1548,13 +2811,18 @@
 
         document
             .querySelectorAll(".hidden")
-            .forEach(element => {
+            .forEach(
+                element => {
 
-                observer.observe(element);
+                    observer.observe(
+                        element
+                    );
 
-            });
+                }
+            );
 
     </script>
 
 </body>
+
 </html>
